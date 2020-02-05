@@ -15,13 +15,13 @@ public class RotorGroup {
     }
 
     public String forward(String letter) {
-        String res = rotor1.translate(letter);
-        res = rotor2.translate(res);
-        return rotor3.translate(res);
+        String res = rotor1.translateForward(letter);
+        res = rotor2.translateForward(res);
+        return rotor3.translateForward(res);
     }
 
     public String reflect(String output) {
-        return reflector.translate(output);
+        return reflector.translateForward(output);
     }
 
     public String backwards(String letter) {

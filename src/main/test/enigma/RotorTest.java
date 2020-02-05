@@ -9,8 +9,8 @@ public class RotorTest {
     @Test
     public void should_change_letters() {
         Rotor rotor = new Rotor("0");
-        assertEquals("B",rotor.translate("A"));
-        assertEquals("C",rotor.translate("B"));
-        assertEquals("D",rotor.translate("C"));
+        assertEquals("B",rotor.translateForward("A"));
+        assertEquals("C",rotor.translateForward("B"));
+        assertEquals("D",rotor.translateForward("C"));
     }
 }

@@ -14,9 +14,9 @@ public class Rotor {
         Rotor.getRotor(type, this);
     }
 
-    public String translate(String letter) {
-        int index = (input.indexOf(letter)+position)%26;
-        String result = String.valueOf(output.charAt(index));
+    public String translate(String letter, String inString, String outString) {
+        int index = (inString.indexOf(letter)+position)%26;
+        String result = String.valueOf(outString.charAt(index));
         return result;
     }
 
@@ -86,8 +86,10 @@ public class Rotor {
     }
 
     public String translateBackwards(String letter) {
-        int index = (output.indexOf(letter)+position)%26;
-        String result = String.valueOf(input.charAt(index));
-        return result;
+        return translate(letter,output,input);
+    }
+
+    public String translateForward(String letter) {
+        return translate(letter,input,output);
     }
 }
