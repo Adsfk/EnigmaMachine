@@ -15,7 +15,7 @@ public class Rotor {
     }
 
     public String translate(String letter) {
-        int index = (input.indexOf(letter)+position)%25;
+        int index = (input.indexOf(letter)+position)%26;
         String result = String.valueOf(output.charAt(index));
         return result;
     }
