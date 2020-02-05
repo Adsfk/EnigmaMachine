@@ -37,7 +37,7 @@ public class RotorGroupTest {
     }
 
     @Test
-    public void should_pass_by_rotors_backwards(){
+    public void should_pass_by_rotors_backwards_returning_N(){
         Rotor r0 = new Rotor("0");
         Rotor r1 = new Rotor("1");
         Rotor r2 = new Rotor("2");
