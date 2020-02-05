@@ -19,4 +19,8 @@ public class RotorGroup {
         res = rotor2.translate(res);
         return rotor3.translate(res);
     }
+
+    public String reflect(String output) {
+        return null;
+    }
 }
