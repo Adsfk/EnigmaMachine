@@ -25,7 +25,15 @@ public class Rotor {
         if (type.equals("0")) {
             rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
             rotor.setOutput("BCDEFGHIJKLMNOPQRSTUVWXYZA");
+        }if (type.equals("1")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("CDEFGHIJKLMNOPQRSTUVWXYZAB");
+        }if (type.equals("2")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("DEFGHIJKLMNOPQRSTUVWXYZABC");
         }
+
+
         if (type.equals("CDI")) {
             rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
             rotor.setOutput("PEZUOHXSCVFMTBGLRINQJWAYDK");
