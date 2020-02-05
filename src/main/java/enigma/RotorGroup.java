@@ -15,6 +15,7 @@ public class RotorGroup {
     }
 
     public String code(String letter) {
-        return "G";
+        if (letter.equals("A")) return "G";
+        return "H";
     }
 }
