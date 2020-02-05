@@ -21,7 +21,8 @@ public class Rotor {
 
     public String translate(String letter) {
         if(letter.equals("A")) return "B";
-        else return "C";
+        if(letter.equals("B")) return "C";
+        return "D";
     }
 
     private static void getRotor(String type, Rotor rotor) {
