@@ -31,6 +31,9 @@ public class Rotor {
         }if (type.equals("2")) {
             rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
             rotor.setOutput("DEFGHIJKLMNOPQRSTUVWXYZABC");
+        }if (type.equals("3")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("ZEFGHIJKLMNOPQRSTUVWXYDCBA");
         }
 
 
