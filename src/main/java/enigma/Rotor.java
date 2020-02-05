@@ -5,6 +5,7 @@ public class Rotor {
     private String type;
     private String input;
     private String output;
+    private int position = 0;
 
 
     public Rotor(String type) {
@@ -21,23 +22,46 @@ public class Rotor {
     }
 
     public String translate(String letter) {
-        int index = input.indexOf(letter);
+        int index = (input.indexOf(letter)+position)%25;
         String result = String.valueOf(output.charAt(index));
         System.out.println(index);
         this.rotate();
         return result;
     }
 
-    private static void getRotor(String type, Rotor rotor) {
+    protected static void getRotor(String type, Rotor rotor) {
         if (type.equals("0")) {
             rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
             rotor.setOutput("BCDEFGHIJKLMNOPQRSTUVWXYZA");
         }
+        if (type.equals("CDI")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("PEZUOHXSCVFMTBGLRINQJWAYDK");
+        }
+        if (type.equals("CDII")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("ZOUESYDKFWPCIQXHMVBLGNJRAT");
+        }
+        if (type.equals("CDIII")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("EHRVXGAOBQUSIMZFLYNWKTPDJC");
+        }
+        if (type.equals("CDIV")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("IMETCGFRAYSQBZXWLHKDVUPOJN");
+        }
+        if (type.equals("CDV")) {
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("QWERTZUIOASDFGHJKPYXCVBNML");
+        }
+        if (type.equals("REF")){
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setOutput("VKWRGIETFZBUSPQNODMHLACYXJ");
+        }
     }
 
     public void rotate() {
-        input = input.substring(1) + input.charAt(0);
-        output = output.substring(1) + output.charAt(0);
+        position = (position++)%25;
     }
 
 }
