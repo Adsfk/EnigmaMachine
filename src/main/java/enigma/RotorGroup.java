@@ -15,6 +15,6 @@ public class RotorGroup {
     }
 
     public String code(String letter) {
-        return null;
+        return "G";
     }
 }
