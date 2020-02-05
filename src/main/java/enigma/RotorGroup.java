@@ -23,4 +23,10 @@ public class RotorGroup {
     public String reflect(String output) {
         return reflector.translate(output);
     }
+
+    public String backwards(String letter) {
+        String res = rotor3.translateBackwards(letter);
+        res = rotor2.translateBackwards(res);
+        return rotor1.translateBackwards(res);
+    }
 }
