@@ -60,4 +60,15 @@ public class RotorGroupTest {
         RotorGroup rotors = new RotorGroup(r0,r1,r2,ref);
         assertNotEquals(rotors.getCodification("A"),rotors.getCodification("A"));
     }
+
+    @Test
+    public void should_decode_N_and_then_M_as_A() {
+        Rotor r0 = new Rotor("0");
+        Rotor r1 = new Rotor("1");
+        Rotor r2 = new Rotor("2");
+        Reflector ref = new Reflector("RT");
+        RotorGroup rotors = new RotorGroup(r0,r1,r2,ref);
+        assertEquals("A",rotors.getCodification("N"));
+        assertEquals("A",rotors.getCodification("M"));
+    }
 }

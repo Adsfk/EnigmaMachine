@@ -35,7 +35,6 @@ public class RotorGroup {
         output = reflect(output);
         output = backwards(output);
         rotate();
-        System.out.println(output );
         return output;
     }
 
