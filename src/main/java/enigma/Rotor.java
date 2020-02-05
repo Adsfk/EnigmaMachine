@@ -14,14 +14,6 @@ public class Rotor {
         Rotor.getRotor(type, this);
     }
 
-    private void setInput(String input) {
-        this.input = input;
-    }
-
-    private void setOutput(String output) {
-        this.output = output;
-    }
-
     public String translate(String letter) {
         int index = (input.indexOf(letter)+position)%25;
         String result = String.valueOf(output.charAt(index));
@@ -63,6 +55,22 @@ public class Rotor {
 
     public void rotate() {
         position = (position++)%25;
+    }
+
+    private void setInput(String input) {
+        this.input = input;
+    }
+
+    private void setOutput(String output) {
+        this.output = output;
+    }
+
+    protected String getInput(){
+        return input;
+    }
+
+    protected String getOutput(){
+        return output;
     }
 
 }

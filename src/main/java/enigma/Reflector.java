@@ -1,12 +1,9 @@
 package enigma;
 
-public class Reflector {
-
-
-    private String input;
-    private String output;
+public class Reflector extends Rotor{
 
     public Reflector(String type){
+        Rotor.getRotor(type,this);
     }
 
 
