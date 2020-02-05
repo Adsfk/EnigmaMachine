@@ -31,8 +31,17 @@ public class RotorGroup {
     }
 
     public String getCodification(String letter) {
-        String output = forward("A");
+        String output = forward(letter);
         output = reflect(output);
-        return backwards(output);
+        output = backwards(output);
+        rotate();
+        System.out.println(output );
+        return output;
+    }
+
+    private void rotate() {
+        if(rotor1.rotate())
+            if(rotor2.rotate())
+                rotor3.rotate();
     }
 }

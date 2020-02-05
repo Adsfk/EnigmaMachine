@@ -59,7 +59,5 @@ public class RotorGroupTest {
         Reflector ref = new Reflector("RT");
         RotorGroup rotors = new RotorGroup(r0,r1,r2,ref);
         assertNotEquals(rotors.getCodification("A"),rotors.getCodification("A"));
-
-
     }
 }
