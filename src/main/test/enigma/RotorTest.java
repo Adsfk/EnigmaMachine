@@ -14,7 +14,13 @@ public class RotorTest {
     }
 
     @Test
-    public void should_change_letter_b_by_d() {
-        assertEquals("D",rotor.translate("B"));
+    public void should_change_letter_b_by_c() {
+        assertEquals("C",rotor.translate("B"));
+    }
+
+
+    @Test
+    public void should_change_letter_c_by_d() {
+        assertEquals("D",rotor.translate("C"));
     }
 }

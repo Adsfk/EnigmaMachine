@@ -11,17 +11,17 @@ public class Rotor {
         Rotor.getRotor(type,this);
     }
 
-    public void setIntput(String intput) {
+    private void setIntput(String intput) {
         this.intput = intput;
     }
 
-    public void setOutput(String output) {
+    private void setOutput(String output) {
         this.output = output;
     }
 
     public String translate(String letter) {
         if(letter.equals("A")) return "B";
-        else return "D";
+        else return "C";
     }
 
     private static void getRotor(String type, Rotor rotor) {
