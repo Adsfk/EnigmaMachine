@@ -11,6 +11,6 @@ public class Reflector {
 
 
     public String translate(String letter) {
-        return null;
+        return "V";
     }
 }

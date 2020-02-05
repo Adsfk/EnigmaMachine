@@ -7,6 +7,7 @@ public class Rotor {
     private String output;
     private int position = 0;
 
+    public Rotor(){}
 
     public Rotor(String type) {
         this.type = type;
