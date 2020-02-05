@@ -8,6 +8,8 @@ public class Reflector extends Rotor{
 
 
     public String translate(String letter) {
-        return "V";
+        int index = getInput().indexOf(letter);
+        String result = String.valueOf(getOutput().charAt(index));
+        return result;
     }
 }
