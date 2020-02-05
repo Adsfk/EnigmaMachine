@@ -29,4 +29,10 @@ public class RotorGroup {
         res = rotor2.translateBackwards(res);
         return rotor1.translateBackwards(res);
     }
+
+    public String getCodification(String letter) {
+        String output = forward("A");
+        output = reflect(output);
+        return backwards(output);
+    }
 }
