@@ -20,9 +20,7 @@ public class Rotor {
     }
 
     public String translate(String letter) {
-        if(letter.equals("A")) return "B";
-        if(letter.equals("B")) return "C";
-        return "D";
+        return String.valueOf(output.charAt(intput.indexOf(letter)));
     }
 
     private static void getRotor(String type, Rotor rotor) {
