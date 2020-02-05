@@ -47,4 +47,16 @@ public class RotorGroupTest {
         output = rotors.reflect(output);
         assertEquals("N", rotors.backwards(output));
     }
+
+    @Test
+    public void should_pass_by_rotors_backwards_returning_M(){
+        Rotor r0 = new Rotor("0");
+        Rotor r1 = new Rotor("1");
+        Rotor r2 = new Rotor("2");
+        Reflector ref = new Reflector("RT");
+        RotorGroup rotors = new RotorGroup(r0,r1,r2,ref);
+        String output = rotors.forward("B");
+        output = rotors.reflect(output);
+        assertEquals("M", rotors.backwards(output));
+    }
 }
