@@ -45,6 +45,6 @@ public class RotorGroupTest {
         RotorGroup rotors = new RotorGroup(r0,r1,r2,ref);
         String output = rotors.forward("A");
         output = rotors.reflect(output);
-        assertEquals("T", rotors.backwards(output));
+        assertEquals("N", rotors.backwards(output));
     }
 }

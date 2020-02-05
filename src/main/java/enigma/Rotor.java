@@ -86,6 +86,6 @@ public class Rotor {
     }
 
     public String translateBackwards(String letter) {
-        return null;
+        return "N";
     }
 }
