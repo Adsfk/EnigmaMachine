@@ -15,7 +15,8 @@ public class RotorGroup {
     }
 
     public String code(String letter) {
-        if (letter.equals("A")) return "G";
-        return "H";
+        String res = rotor1.translate(letter);
+        res = rotor2.translate(res);
+        return rotor3.translate(res);
     }
 }

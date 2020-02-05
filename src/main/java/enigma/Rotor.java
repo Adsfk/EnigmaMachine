@@ -17,7 +17,6 @@ public class Rotor {
     public String translate(String letter) {
         int index = (input.indexOf(letter)+position)%25;
         String result = String.valueOf(output.charAt(index));
-        this.rotate();
         return result;
     }
 

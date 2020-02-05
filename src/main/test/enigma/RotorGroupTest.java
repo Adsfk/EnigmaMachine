@@ -11,7 +11,7 @@ public class RotorGroupTest {
         Rotor r1 = new Rotor("1");
         Rotor r2 = new Rotor("2");
         RotorGroup rotors = new RotorGroup(r0,r1,r2,null);
-        assertEquals(rotors.code("A"),"G");
+        assertEquals("G",rotors.code("A"));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class RotorGroupTest {
         Rotor r1 = new Rotor("1");
         Rotor r2 = new Rotor("2");
         RotorGroup rotors = new RotorGroup(r0,r1,r2,null);
-        assertEquals(rotors.code("B"),"H");
+        assertEquals("H",rotors.code("B"));
     }
 
     @Test
@@ -29,6 +29,6 @@ public class RotorGroupTest {
         Rotor r1 = new Rotor("1");
         Rotor r2 = new Rotor("2");
         RotorGroup rotors = new RotorGroup(r0,r1,r2,null);
-        assertEquals(rotors.code("A"),"C");
+        assertEquals("C",rotors.code("A"));
     }
 }
