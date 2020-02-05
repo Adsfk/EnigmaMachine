@@ -31,4 +31,6 @@ public class RotorGroupTest {
         RotorGroup rotors = new RotorGroup(r0,r1,r2,null);
         assertEquals("E",rotors.code("A"));
     }
+
+
 }
