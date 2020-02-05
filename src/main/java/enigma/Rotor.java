@@ -6,13 +6,10 @@ public class Rotor {
     private String input;
     private String output;
 
-    public Rotor(){
-        setRotors("0");
-    }
 
     public Rotor(String type) {
         this.type = type;
-        setRotors(type);
+        Rotor.getRotor(type, this);
     }
 
     private void setInput(String input) {
@@ -24,8 +21,9 @@ public class Rotor {
     }
 
     public String translate(String letter) {
-        if(input==null) setRotors("0");
-        String result =String.valueOf(output.charAt(input.indexOf(letter)));
+        int index = input.indexOf(letter);
+        String result = String.valueOf(output.charAt(index));
+        System.out.println(index);
         this.rotate();
         return result;
     }
@@ -38,10 +36,8 @@ public class Rotor {
     }
 
     public void rotate() {
-
+        input = input.substring(1) + input.charAt(0);
+        output = output.substring(1) + output.charAt(0);
     }
 
-    public void setRotors(String s) {
-        Rotor.getRotor(s,this);
-    }
 }

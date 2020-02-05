@@ -13,10 +13,4 @@ public class RotorTest {
         assertEquals("C",rotor.translate("B"));
         assertEquals("D",rotor.translate("C"));
     }
-
-    @Test
-    public void should_rotate_after_translation() {
-        Rotor rotor = new Rotor("0");
-        assertNotEquals(rotor.translate("A"),rotor.translate("A"));
-    }
 }
