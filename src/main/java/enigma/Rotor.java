@@ -3,16 +3,20 @@ package enigma;
 public class Rotor {
 
     private String type;
-    private String intput;
+    private String input;
     private String output;
+
+    public Rotor(){
+        setRotors("0");
+    }
 
     public Rotor(String type) {
         this.type = type;
-        Rotor.getRotor(type,this);
+        setRotors(type);
     }
 
-    private void setIntput(String intput) {
-        this.intput = intput;
+    private void setInput(String input) {
+        this.input = input;
     }
 
     private void setOutput(String output) {
@@ -20,13 +24,24 @@ public class Rotor {
     }
 
     public String translate(String letter) {
-        return String.valueOf(output.charAt(intput.indexOf(letter)));
+        if(input==null) setRotors("0");
+        String result =String.valueOf(output.charAt(input.indexOf(letter)));
+        this.rotate();
+        return result;
     }
 
     private static void getRotor(String type, Rotor rotor) {
         if (type.equals("0")) {
-            rotor.setIntput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+            rotor.setInput("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
             rotor.setOutput("BCDEFGHIJKLMNOPQRSTUVWXYZA");
         }
+    }
+
+    public void rotate() {
+
+    }
+
+    public void setRotors(String s) {
+        Rotor.getRotor(s,this);
     }
 }
