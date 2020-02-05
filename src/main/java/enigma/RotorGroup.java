@@ -14,7 +14,7 @@ public class RotorGroup {
         this.reflector = reflector;
     }
 
-    public String code(String letter) {
+    public String forward(String letter) {
         String res = rotor1.translate(letter);
         res = rotor2.translate(res);
         return rotor3.translate(res);
