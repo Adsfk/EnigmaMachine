@@ -21,6 +21,6 @@ public class RotorGroup {
     }
 
     public String reflect(String output) {
-        return null;
+        return reflector.translate(output);
     }
 }
