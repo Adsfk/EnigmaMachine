@@ -9,6 +9,7 @@ public class Rotor {
     }
 
     public String translate(String letter) {
-        return "B";
+        if(letter.equals("A")) return "B";
+        else return "D";
     }
 }
