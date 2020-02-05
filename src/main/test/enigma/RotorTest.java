@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class RotorTest {
 
-    private Rotor rotor = new Rotor("I");
+    private Rotor rotor = new Rotor("0");
 
     @Test
     public void should_change_letter_a_by_b() {
